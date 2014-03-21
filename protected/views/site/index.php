@@ -69,7 +69,7 @@ $this->pageTitle=Yii::app()->name;
                 <div class="detail-entry">
                     <i class="icon-magnet"></i>
                     <h5>Fully Responsive</h5>
-                    <p>Re-size your browser to see how well it works.<br/>Desktop, Tablet or Phone - all get great content presentation</p>
+                    <p>Desktop, Tablet or Phone - all get great content presentation<br/>(resize your browser)</p>
                 </div>
                 <div class="transform"></div>
             </div>
