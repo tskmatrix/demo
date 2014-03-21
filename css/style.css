@@ -1,4 +1,4 @@
-/*   
+/*
 Template Name: Boss - Responsive Bootstrap Template
 Description: Business, Corporate, Portfolio and Blog Theme.
 Version: 1.2
@@ -10,7 +10,7 @@ Website:
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,600,600italic,700,700italic,800italic,800);
 
 
-body { 
+body {
     background-color: #FFFFFF;
     color: #828282;
     font: 12px/1.5 Arial;
@@ -132,7 +132,7 @@ hr.lined-bottom {
     margin-top: 0px;
 }
 hr.striped {
-    background: url("../img/bg-head.jpg") repeat scroll 0 0 transparent;
+    background: url("../images/bg-head.jpg") repeat scroll 0 0 transparent;
     height: 14px;
     margin: 20px 0;
 }
@@ -142,7 +142,7 @@ hr.striped {
     margin: 35px 0;
 }
 .shadow-2:after {
-    background: url("../img/shadow-2.png") no-repeat scroll 0 0 / 100% auto transparent;
+    background: url("../images/shadow-2.png") no-repeat scroll 0 0 / 100% auto transparent;
     bottom: -55px;
     height: 55px;
     left: 0;
@@ -269,7 +269,7 @@ input.form-control {
 	margin:15px 0 25px 0;
 	border-bottom:1px dotted #e4e9f0;
 }
-.headline h3, 
+.headline h3,
 .headline h4 {
 	color:#585f69;
 	margin:0 0 -2px 0;
@@ -319,7 +319,7 @@ input.form-control {
 	background:#79BE0B;
 	text-decoration:none;
 	box-shadow:0 0 5px #c0c2c1;
-} 
+}
 /* Options */
 
 .options {
@@ -359,7 +359,7 @@ input.form-control {
     text-decoration: none;
 }
 /*Service*/
-.service { 
+.service {
 	margin-bottom:40px;
 	padding:15px 15px 10px;
 }
@@ -379,7 +379,7 @@ input.form-control {
 	float:left;
 	padding:10px;
 	color:#79BE0B;
-	font-size:45px;  
+	font-size:45px;
 	text-align:center;
     -webkit-transition:all 0.4s ease-in-out;
     -moz-transition:all 0.4s ease-in-out;
@@ -448,7 +448,7 @@ input.form-control {
 }
 /*Blockquote*/
 blockquote {
-    background-image: url("../img/quotes.png");
+    background-image: url("../images/quotes.png");
     background-position: 5px 8px;
     background-repeat: no-repeat;
     border:0;
@@ -789,7 +789,7 @@ blockquote small {
 }
 
 .quote .ava {
-    background: url("../img/ava.jpg") repeat scroll 0 0 #FAFAFA;
+    background: url("../images/ava.jpg") repeat scroll 0 0 #FAFAFA;
     display: block;
     float: left;
     height: 60px;
@@ -859,7 +859,7 @@ blockquote small {
 /*Clients (Flexslider)*/
 .clients {
 	box-shadow:none !important;
-	margin-bottom:0 !important;    
+	margin-bottom:0 !important;
 }
 .clients li {
 	float:left;
@@ -877,7 +877,7 @@ blockquote small {
 	display:none;
 	position:absolute;
 }
-.clients li:hover img.color-img { 
+.clients li:hover img.color-img {
 	display:block;
 }
 .clients li img {
@@ -888,18 +888,18 @@ blockquote small {
 .clients li img:hover {
     filter:none;
 }
-.clients, 
+.clients,
 .flexslider.home {
     border:0px;
     overflow:hidden;
-    margin-top:10px;      
-    margin-bottom:30px;      
+    margin-top:10px;
+    margin-bottom:30px;
 	border-radius:0;
 	-moz-border-radius:0;
 	-webkit-border-radius:0;
 }
 
-.flexslider { 
+.flexslider {
 	margin-top:10px !important;
 }
 .flexslider .flex-direction-nav a {
@@ -1063,7 +1063,7 @@ blockquote small {
 }
 .footer .blog-list li {
 	padding:0 0;
-	margin-bottom:7px; 
+	margin-bottom:7px;
 }
 .footer .blog-list li span {
 	color:#818488;
@@ -1522,7 +1522,7 @@ blockquote small {
     }
 }
 /*Thumbnail*/
-.thumbnail-style { 
+.thumbnail-style {
 	border-radius:0px;
     margin-bottom: 40px;
     overflow: hidden;
@@ -1532,7 +1532,7 @@ blockquote small {
 .thumbnail-style .bwWrapper {
     width: 100%;
 }
-.thumbnail-style:hover { 
+.thumbnail-style:hover {
     -webkit-transition:box-shadow 0.2s ease-in-out;
     -moz-transition:box-shadow 0.2s ease-in-out;
     -o-transition:box-shadow 0.2s ease-in-out;
@@ -1574,7 +1574,7 @@ blockquote small {
 	padding:1px 6px;
 	position:absolute;
 	background:#79BE0B;
-	display:inline-block; 
+	display:inline-block;
 }
 .thumbnail-style a.btn-more:hover {
 	text-decoration:none;
@@ -1615,7 +1615,7 @@ blockquote small {
    -ms-transform: scale(1.2) rotate(2deg);
    transform: scale(1.2) rotate(2deg);
 }
- 
+
 /*Welcome Block*/
 .servive-block .p-20 {
     color: #6E6E73;
@@ -1739,7 +1739,7 @@ blockquote small {
 
 .acc-home .panel-heading .accordion-toggle:before {
     content: "";
-    background: #4b4c4d url('../img/collapse.png') center top;
+    background: #4b4c4d url('../images/collapse.png') center top;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     border-radius: 0px;
@@ -1759,7 +1759,7 @@ blockquote small {
     content: "?";
 }
 .acc-home .panel-heading.active .accordion-toggle:before {
-    background: #79be0b url('../img/collapse.png') center bottom;
+    background: #79be0b url('../images/collapse.png') center bottom;
     color: #FFFFFF;
 }
 .acc-home.faq .panel-heading.active .accordion-toggle:before {
@@ -1800,8 +1800,8 @@ blockquote small {
 }
 
 .posts .media .media-object {
-	width:50px; 
-	height:50px; 
+	width:50px;
+	height:50px;
 	border:solid 3px #eee;
 }
 .posts .media .media-body {
@@ -1845,13 +1845,13 @@ blockquote small {
 }
 
 /*Carousel*/
-.carousel-control { 
-	color:#fff; 
-	border:none; 
+.carousel-control {
+	color:#fff;
+	border:none;
 	margin-top:0;
-	border-radius:2px; 
+	border-radius:2px;
 }
-.carousel-control:hover { 
+.carousel-control:hover {
 	opacity:1;
 	color:#79BE0B;
 }
@@ -2107,14 +2107,14 @@ blockquote small {
 }
 .who li i {
 	color:#5A6166;
-	position:relative; 
-	top:2px; 
+	position:relative;
+	top:2px;
 	left: -20px;
     position: absolute;
 	font-size:14px;
 }
-.who li:hover i, 
-.who li:hover a { 
+.who li:hover i,
+.who li:hover a {
 	color:#777;
 }
 .who li:hover a:hover {
@@ -2131,7 +2131,7 @@ blockquote small {
 /*Home Page "Options"
 ------------------------------------*/
 /*Service Blocks*/
-.service-alternative .service:hover { 
+.service-alternative .service:hover {
 	background:#79BE0B;
     -webkit-transition:all 0.4s ease-in-out;
     -moz-transition:all 0.4s ease-in-out;
@@ -2140,7 +2140,7 @@ blockquote small {
 }
 .service-alternative .service:hover i,
 .service-alternative .service:hover p,
-.service-alternative .service:hover h4 { 
+.service-alternative .service:hover h4 {
 	color:#fff;
 }
 /*Service Box*/
@@ -2186,7 +2186,7 @@ blockquote small {
 }
 /*About Page
 ------------------------------------*/
-.team ul { 
+.team ul {
 
 }
 .team ul li {
@@ -2270,17 +2270,17 @@ blockquote small {
 }
 /*Icons Page
 ------------------------------------*/
-.icon-page li { 
-	color:#555; 
+.icon-page li {
+	color:#555;
 	margin:5px 0;
-	font-size:14px; 
+	font-size:14px;
 	font-family:'Roboto';
 }
-.icon-page li i { 
-	font-size:14px; 
+.icon-page li i {
+	font-size:14px;
 	margin-right:5px;
 }
-.icon-page li:hover { 
+.icon-page li:hover {
 	color:#79BE0B;
 }
 
@@ -2304,7 +2304,7 @@ blockquote small {
 	margin:0;
 	line-height:normal;
 }
-.pricing-head h3 span, 
+.pricing-head h3 span,
 .pricing-head h4 span {
 	display:block;
 	margin-top:5px;
@@ -2351,7 +2351,7 @@ blockquote small {
     line-height: 18px;
     text-transform: uppercase;
 }
-	
+
 /*Pricing Content*/
 .pricing-content {
     border-bottom: 1px solid #D7D7D7;
@@ -2568,13 +2568,13 @@ blockquote small {
 }
 /*Clients Page
 ------------------------------------*/
-.clients-page { 
+.clients-page {
 	overflow:hidden;
 }
-.clients-page p { 
+.clients-page p {
 	overflow:auto;
 }
-.clients-page p a { 
+.clients-page p a {
 	overflow:auto;
 	text-decoration:underline;
 }
@@ -2582,7 +2582,7 @@ blockquote small {
 	display:block;
 	position:relative;
 }
-.clients-page img { 
+.clients-page img {
 	float:left;
 	margin-right:20px;
 	background:#fafafa;
@@ -2595,7 +2595,7 @@ blockquote small {
 }
 .clients-page a:hover img.img-colorful,
 .clients-page:hover img.img-colorful {
-	top:0; 
+	top:0;
 	left:0;
 	display:block;
 	position:absolute;
@@ -2629,7 +2629,7 @@ blockquote small {
 
 /*Portfolio Item Page
 ------------------------------------*/
-.portfolio-item h3 { 
+.portfolio-item h3 {
 	margin-top:0;
 }
 .portfolio-item li {
@@ -3023,7 +3023,7 @@ ul.blog-tags li {
 /*Contact Page
 ------------------------------------*/
 .map {
-	width:100%; 
+	width:100%;
 	height:350px;
 	border-top:solid 1px #eee;
 	border-bottom:solid 1px #eee;
@@ -3064,7 +3064,7 @@ ul.blog-tags li {
 	padding: 20px;
 	text-align: center;
 	margin-top: 20px;
-}  
+}
 
 .coming-soon-plugin {
 	min-height: 260px;
@@ -3088,9 +3088,9 @@ ul.blog-tags li {
 }
 
 .coming-soon input {
-	box-shadow: none;	
-	-moz-box-shadow: none;	
-	-webkit-box-shadow: none;	
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
 }
 
 .coming-soon-copyright {
@@ -3150,7 +3150,7 @@ ul.blog-tags li {
 }
 
 .one-page .btn-m {
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
 }
 
 .one-page .one-default {
@@ -3261,13 +3261,13 @@ ul.blog-tags li {
 }
 
 /*Background light-style*/
-.bg-light { 
-	padding:10px 15px; 
+.bg-light {
+	padding:10px 15px;
 	border-radius:3px;
-	margin-bottom:10px; 
-	background:#fcfcfc; 
+	margin-bottom:10px;
+	background:#fcfcfc;
 }
-.bg-light:hover { 
+.bg-light:hover {
 	padding:9px 14px;
 	border:solid 1px #e5e5e5;
 }
@@ -3277,7 +3277,7 @@ a.read-more {
 	font-weight:bold;
 	text-decoration:none;
 }
-a.read-more:hover { 
+a.read-more:hover {
 	color:#79BE0B;
 	text-decoration:none;
 }
@@ -3314,16 +3314,16 @@ a.read-more:hover {
 }
 
 /*Spaces*/
-.margin-bottom-5, 
-.margin-bottom-10, 
-.margin-bottom-20, 
+.margin-bottom-5,
+.margin-bottom-10,
 .margin-bottom-20,
-.margin-bottom-25, 
-.margin-bottom-40, 
-.margin-bottom-50, 
-.margin-bottom-60 { 
+.margin-bottom-20,
+.margin-bottom-25,
+.margin-bottom-40,
+.margin-bottom-50,
+.margin-bottom-60 {
 	clear:both;
-}   
+}
 .margin-bottom-5 {
 	margin-bottom:5px;
 }
@@ -3585,37 +3585,37 @@ a.read-more:hover {
     -webkit-transition: all 0.2s ease;
 }
 
-.social_amazon {background: url(../img/icons/social/amazon.png) no-repeat;}
-.social_behance {background: url(../img/icons/social/behance.png) no-repeat;}
-.social_blogger {background: url(../img/icons/social/blogger.png) no-repeat;}
-.social_deviantart {background: url(../img/icons/social/deviantart.png) no-repeat;}
-.social_dribbble {background: url(../img/icons/social/dribbble.png) no-repeat;}
-.social_dropbox {background: url(../img/icons/social/dropbox.png) no-repeat;}
-.social_evernote {background: url(../img/icons/social/evernote.png) no-repeat;}
-.social_facebook {background: url(../img/icons/social/facebook.png) no-repeat;}
-.social_forrst {background: url(../img/icons/social/forrst.png) no-repeat;}
-.social_github {background: url(../img/icons/social/github.png) no-repeat;}
-.social_googleplus {background: url(../img/icons/social/googleplus.png) no-repeat;}
-.social_jolicloud {background: url(../img/icons/social/jolicloud.png) no-repeat;}
-.social_last-fm {background: url(../img/icons/social/last-fm.png) no-repeat;}
-.social_linkedin {background: url(../img/icons/social/linkedin.png) no-repeat;}
-.social_picasa {background: url(../img/icons/social/picasa.png) no-repeat;}
-.social_pintrest {background: url(../img/icons/social/pintrest.png) no-repeat;}
-.social_rss {background: url(../img/icons/social/rss.png) no-repeat;}
-.social_skype {background: url(../img/icons/social/skype.png) no-repeat;}
-.social_spotify {background: url(../img/icons/social/spotify.png) no-repeat;}
-.social_stumbleupon {background: url(../img/icons/social/stumbleupon.png) no-repeat;}
-.social_tumblr {background: url(../img/icons/social/tumblr.png) no-repeat;}
-.social_twitter {background: url(../img/icons/social/twitter.png) no-repeat;}
-.social_vimeo {background: url(../img/icons/social/vimeo.png) no-repeat;}
-.social_wordpress {background: url(../img/icons/social/wordpress.png) no-repeat;}
-.social_xing {background: url(../img/icons/social/xing.png) no-repeat;}
-.social_yahoo {background: url(../img/icons/social/yahoo.png) no-repeat;}
-.social_youtube {background: url(../img/icons/social/youtube.png) no-repeat;}
+.social_amazon {background: url(../images/icons/social/amazon.png) no-repeat;}
+.social_behance {background: url(../images/icons/social/behance.png) no-repeat;}
+.social_blogger {background: url(../images/icons/social/blogger.png) no-repeat;}
+.social_deviantart {background: url(../images/icons/social/deviantart.png) no-repeat;}
+.social_dribbble {background: url(../images/icons/social/dribbble.png) no-repeat;}
+.social_dropbox {background: url(../images/icons/social/dropbox.png) no-repeat;}
+.social_evernote {background: url(../images/icons/social/evernote.png) no-repeat;}
+.social_facebook {background: url(../images/icons/social/facebook.png) no-repeat;}
+.social_forrst {background: url(../images/icons/social/forrst.png) no-repeat;}
+.social_github {background: url(../images/icons/social/github.png) no-repeat;}
+.social_googleplus {background: url(../images/icons/social/googleplus.png) no-repeat;}
+.social_jolicloud {background: url(../images/icons/social/jolicloud.png) no-repeat;}
+.social_last-fm {background: url(../images/icons/social/last-fm.png) no-repeat;}
+.social_linkedin {background: url(../images/icons/social/linkedin.png) no-repeat;}
+.social_picasa {background: url(../images/icons/social/picasa.png) no-repeat;}
+.social_pintrest {background: url(../images/icons/social/pintrest.png) no-repeat;}
+.social_rss {background: url(../images/icons/social/rss.png) no-repeat;}
+.social_skype {background: url(../images/icons/social/skype.png) no-repeat;}
+.social_spotify {background: url(../images/icons/social/spotify.png) no-repeat;}
+.social_stumbleupon {background: url(../images/icons/social/stumbleupon.png) no-repeat;}
+.social_tumblr {background: url(../images/icons/social/tumblr.png) no-repeat;}
+.social_twitter {background: url(../images/icons/social/twitter.png) no-repeat;}
+.social_vimeo {background: url(../images/icons/social/vimeo.png) no-repeat;}
+.social_wordpress {background: url(../images/icons/social/wordpress.png) no-repeat;}
+.social_xing {background: url(../images/icons/social/xing.png) no-repeat;}
+.social_yahoo {background: url(../images/icons/social/yahoo.png) no-repeat;}
+.social_youtube {background: url(../images/icons/social/youtube.png) no-repeat;}
 
 /*Revolution Slider*/
 .bg-black-opacity {
-	background: url(../img/sliders/revolution/bg-text.png) repeat;
+	background: url(../images/sliders/revolution/bg-text.png) repeat;
 	padding: 7px;
 	text-shadow: none !important;
 }
@@ -3676,7 +3676,7 @@ a.read-more:hover {
 }
 
 #topcontrol:before {
-    background-image: url("../img/back-to-top.png");
+    background-image: url("../images/back-to-top.png");
     background-position: center center;
     background-repeat: no-repeat;
     content: "";
