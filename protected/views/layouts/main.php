@@ -21,6 +21,7 @@
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/portfolioSorting/css/sorting.css">
     <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/flexslider/flexslider.css" type="text/css" media="screen">
     <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/fancybox/source/jquery.fancybox.css">
     <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/parallax-slider/css/parallax-slider.css" type="text/css">
@@ -45,16 +46,8 @@
             </div>
             <div class="col-md-7 col-sm-6 col-xs-12 submenu">
                 <ul class="loginbar">
-                    <li><i class="icon-globe"></i><a href="#">Languages</a>
-                        <ul class="nav-list list-unstyled">
-                            <li class="active"><a href="#">English</a></li>
-                            <li><a href="#">Spanish</a></li>
-                            <li><a href="#">Russian</a></li>
-                            <li><a href="#">German</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="page_faq.html" class="login-btn">Help</a></li>
-                    <li><a href="page_login.html" class="login-btn">Login</a></li>
+                    <li><?php echo CHtml::link('Help', array('site/page','view'=>'faq'), array('class'=>'login-btn')); ?></li>
+                    <li><?php echo CHtml::link('Login', array('/usr/default/Login'), array('class'=>'login-btn')); ?></li>
                 </ul>
                 <ul class="list-inline socials-content socials-light">
                     <li>
@@ -112,10 +105,14 @@
                 array('label' => 'Info','items' => array(
                 	array('label' => 'About Us','url' => array('/site/page', 'view'=>'about')),
                 	array('label' => 'Our Services', 'url' => array('/site/page', 'view'=>'services')),
+                	array('label' => 'Our Clients', 'url' =>array('/site/page', 'view'=>'clients')),
                 	array('label' => 'Contact', 'url' => '/demo/site/Contact'),
+                	array('label' => 'Terms of Service', 'url' =>array('/site/page', 'view'=>'terms')),
+                	array('label' => 'Privacy Policy', 'url' =>array('/site/page', 'view'=>'privacy')),
                 	)),
-                array('label' => 'Login', 'url' => '/demo/site/Login', 'visible'=>Yii::app()->user->isGuest),
-                array('label' => 'Register', 'url' => '/demo/site/register', 'visible'=>Yii::app()->user->isGuest),
+                array('label' => 'Portfolio', 'url' =>array('/site/page', 'view'=>'portfolio')),
+                array('label' => 'Login', 'url' => '/demo/usr/default/Login', 'visible'=>Yii::app()->user->isGuest),
+                array('label' => 'Register', 'url' => '/demo/usr/default/register', 'visible'=>Yii::app()->user->isGuest),
                 array('label' => 'Logout ('. Yii::app()->user->name . ')' , 'url' => '/demo/site/Logout', 'visible'=>!Yii::app()->user->isGuest),
                 TbHtml::navbarSearchForm('#'),
             ),
@@ -137,6 +134,7 @@
 	<?php echo $content; ?>
 	<!-- End Yii Page Content -->
 
+	<hr class="lined-bottom"/>
 
     <!-- Our Clients -->
     <div id="clients-flexslider" class="flexslider home clients">
@@ -247,6 +245,7 @@
         </ul>
     </div><!--/flexslider-->
     <!-- //End Our Clients -->
+    <hr class="lined-bottom"/>
 <!--=== Footer ===-->
 <div class="footer">
     <div class="container widgets">
@@ -367,6 +366,8 @@
 <script type="text/javascript" src="/extensions/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- JS Implementing Plugins -->
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/portfolioSorting/js/jquery.quicksand.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/portfolioSorting/js/sorting.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/parallax-slider/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/parallax-slider/js/jquery.cslider.js"></script>

@@ -259,8 +259,6 @@ $this->pageTitle=Yii::app()->name;
 </div>
 <!-- /tabs & testimonials -->
 
-    <hr class="lined-bottom"/>
-
 </div><!--/container-->
 <!-- End Content Part -->
 

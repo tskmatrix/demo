@@ -6,8 +6,12 @@ $this->breadcrumbs=array(
 	'Our Services',
 );
 ?>
-<h2>Our Services</h2>
-<hr class="lined-bottom"/>
+<div class="breadcrumbs margin-bottom-30">
+	<div class="container">
+        <h1 class="color-red pull-left">Our Services</h1>
+    </div>
+</div>
+
 <!--=== Content Part ===-->
 <div class="container">
     <!-- Icon box image -->
@@ -220,7 +224,7 @@ $this->breadcrumbs=array(
     </div>
     <!-- /Icon box number -->
 
-    <hr class="lined"/>
+
 
 </div><!--/container-->
 <!--=== End Content Part ===-->

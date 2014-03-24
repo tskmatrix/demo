@@ -30,6 +30,12 @@ return array(
 	),
 
 	'modules'=>array(
+	     /**
+		 * download and install the usr module from https://github.com/nineinchnick/yii-usr
+		 */
+		'usr'=>array(
+               'userIdentityClass' => 'UserIdentity',
+        ),
 		// uncomment the following to enable the Gii tool
 
 		'gii'=>array(
@@ -44,10 +50,6 @@ return array(
 
 	// application components
 	'components'=>array(
-		'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-		),
 		'bootstrap' => array(
             'class' => 'bootstrap.components.TbApi',
         ),
@@ -55,6 +57,10 @@ return array(
         'yiiwheels' => array(
             'class' => 'yiiwheels.YiiWheels',
         ),
+        'user'=>array(
+			// enable cookie-based authentication
+			'allowAutoLogin'=>true,
+		),
 
 		// uncomment the following to enable URLs in path-format
 
@@ -68,13 +74,6 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-
-		/*
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
-		*/
-		// uncomment the following to use a MySQL database
 
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=demo',

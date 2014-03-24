@@ -6,12 +6,17 @@ $this->breadcrumbs=array(
 	'About',
 );
 ?>
+<div class="breadcrumbs margin-bottom-30">
+	<div class="container">
+        <h1 class="color-red pull-left">About Us</h1>
+    </div>
+</div>
 <!--=== Content Part ===-->
 <div class="container">
 	<div class="row">
         <div class="col-md-8">
             <div class="margin-bottom-40">
-                <h3 class="content-title">About us</h3>
+                <h3 class="content-title">About TSKMatrix</h3>
                 <p>Lime is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone. Lorem sequat ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Lime is an incredibly beautiful responsive Bootstrap Template for It works on all major web.</p>
                 <p>Lime is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone. Lorem sequat ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Lime is an incredibly beautiful responsive Bootstrap Template for It works on all major web.</p>
                 <p> It works on all major web browsers, tablets and phone. Lorem sequat ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Lime is an incredibly beautiful responsive Bootstrap Template for It works on all major web.</p>
@@ -35,7 +40,7 @@ $this->breadcrumbs=array(
                     </li>
                     <li class="meter">
                         <div class="meter-content" style="width: 97%;" data-percentage="97"></div>
-                        <span class="meter-title">WordPress 97%</span>
+                        <span class="meter-title">Yii Framwork 97%</span>
                     </li>
                 </ul>
              </div>
@@ -54,26 +59,20 @@ $this->breadcrumbs=array(
                     <div class="bwWrapper">
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/others/2.jpg" alt="" />
                     </div>
-                    <h3><a href="#">Jack Bour</a><small>Chief Executive Officer</small></h3>
+                    <h3><a href="#">Tom S King, Jr.</a><small>Chief Executive Officer</small></h3>
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem...</p>
                     <ul class="list-inline socials-content team-socials">
                         <li>
-                            <a class="rss" href="#"><i class="icon-rss"></i></a>
+                            <a class="rss" href="http://feeds.feedburner.com/TomKingOnline/SMPubcast" target="_blank"><i class="icon-rss"></i></a>
                         </li>
                         <li>
-                            <a class="fb" href="#"><i class="icon-facebook"></i></a>
+                            <a class="fb" href="https://www.facebook.com/tom.king.9210" target="_blank"><i class="icon-facebook"></i></a>
                         </li>
                         <li>
-                            <a class="tw" href="#"><i class="icon-twitter"></i></a>
+                            <a class="gl" href="http://plus.google.com/108284782179321344703" target="_blank"><i class="icon-google-plus"></i></a>
                         </li>
                         <li>
-                            <a class="gl" href="#"><i class="icon-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a class="pt" href="#"><i class="icon-pinterest"></i></a>
-                        </li>
-                        <li>
-                            <a class="lin" href="#"><i class="icon-linkedin"></i></a>
+                            <a class="lin" href="http://www.linkedin.com/in/tomkingonline/" target="_blank"><i class="icon-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -192,7 +191,5 @@ $this->breadcrumbs=array(
         </div>
     </div>
     <!-- /Why choose Us? -->
-
-    <hr class="lined-bottom" />
 </div><!--/container-->
 <!--=== End Content Part ===-->

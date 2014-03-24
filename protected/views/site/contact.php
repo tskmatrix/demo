@@ -8,8 +8,12 @@ $this->breadcrumbs=array(
 	'Contact',
 );
 ?>
+<div class="breadcrumbs margin-bottom-30">
+	<div class="container">
+        <h1 class="color-red pull-left">Contact Us</h1>
+    </div>
+</div>
 
-<h1>Contact Us</h1>
  <div class="row-fluid">
     <div class="span12">
         <div class="gmap">
@@ -40,21 +44,12 @@ If you have business inquiries or other questions, please fill out the following
 		'validateOnSubmit'=>true,
    ),
 )); ?>
-
-<?php //$form=$this->beginWidget('CActiveForm', array(
-	//'id'=>'contact-form',
-	//'enableClientValidation'=>true,
-	//'clientOptions'=>array(
-	//	'validateOnSubmit'=>true,
-//	),
-//)); ?>
-
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->textFieldControlGroup($model, 'name', array('prepend' => '')); ?>
+		<?php echo $form->textFieldControlGroup($model, 'name', array('prepend' => '?')); ?>
 	</div>
 
 	<div class="row">
@@ -67,7 +62,7 @@ If you have business inquiries or other questions, please fill out the following
 
 	<div class="row">
 		<?php echo $form->textAreaControlGroup($model, 'body',
-        array('span' => 60, 'rows' => 6, 'cols'=>60)); ?>
+        array('span' => 60, 'rows' => 6, 'cols'=>25)); ?>
 	</div>
 
 	<?php if(CCaptcha::checkRequirements()): ?>
