@@ -26,11 +26,11 @@ $this->breadcrumbs=array(
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
-		<?php echo $form->textFieldControlGroup($model, 'username', array('prepend' => '@')); ?>
+		<?php echo $form->textFieldControlGroup($model, 'username', array('prepend' => '<span class="input-group-addon"><i class="icon-user"></i></span>')); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->textFieldControlGroup($model, 'password', array('prepend' => '?')); ?>
+		<?php echo $form->passwordFieldControlGroup($model, 'password', array('prepend' => '<span class="input-group-addon"><i class="icon-lock"></i></span>')); ?>
 	</div>
 
 	<div class="row rememberMe">

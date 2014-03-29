@@ -1,11 +1,11 @@
 <?php
 Yii::import('usr.components.*');
 /**
- * UserIdentity represents the data needed to identity a user.
+ * UserIdentity represents the data needed to identify a user.
  * It contains the authentication method that checks if the provided
- * data can identity the user.
+ * data can identify the user.
  */
-class ExampleUserIdentity extends CUserIdentity
+class UserIdentity extends CUserIdentity
 	implements IPasswordHistoryIdentity,
 	IActivatedIdentity,
 	IEditableIdentity,
