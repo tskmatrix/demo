@@ -41,11 +41,11 @@ return array(
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 		    'generatorPaths'=>array('bootstrap.gii'),
-			'password'=>'Enter Your Password Here',
+			'password'=>'r0cK5tar',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-			'administration',
+			//'administration',
 	),
 
 	// application components
@@ -69,6 +69,8 @@ return array(
 		     'showScriptName'=>false,
 		     'caseSensitive'=>false,
 			'rules'=>array(
+                'post/<id:\d+>/<title:.*?>'=>'/post/view',
+                'posts/<tag:.*?>'=>'/post/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
@@ -81,6 +83,7 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
+            //'tablePrefix' => 'tbl_',
 		),
 
 		'errorHandler'=>array(
@@ -95,11 +98,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+
 			),
 		),
 	),

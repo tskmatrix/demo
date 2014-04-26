@@ -7,6 +7,8 @@ if (isset($this->breadcrumbs))
 	$this->breadcrumbs=array($this->module->id, $title);
 $this->pageTitle = Yii::app()->name.' - '.$title;
 ?>
+<div class="container">
+	<div class="col-md-12">
 <h1><?php echo $title; ?><small style="margin-left: 1em;"><?php echo CHtml::link(Yii::t('UsrModule.usr', 'update'), array('profile', 'update'=>true)); ?></small></h1>
 
 <?php $this->widget('usr.components.UsrAlerts', array('cssClassPrefix'=>$this->module->alertCssClassPrefix)); ?>
@@ -33,4 +35,6 @@ if ($model->getIdentity() instanceof IPictureIdentity) {
 	));
 }
 $this->widget($this->module->detailViewClass, array('data' => $model, 'attributes' => $attributes));
-
+?>
+	</div>
+</div>

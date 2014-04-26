@@ -4974,6 +4974,7 @@ input[type="submit"].btn.btn-mini {
 
 .pagination {
   margin: 20px 0;
+  list-style-type:none;
 }
 
 .pagination ul {

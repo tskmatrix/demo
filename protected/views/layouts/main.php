@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/effects.css">
 
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<title><?php echo CHtml::encode($this -> pageTitle); ?></title>
 </head>
 
 <body>
-<?php Yii::app()->bootstrap->register(); ?>
+<?php Yii::app() -> bootstrap -> register(); ?>
 
 <!--=== Top ===-->
 <div class="top">
@@ -41,13 +41,13 @@
         <div class="row">
             <div class="col-md-5 col-sm-6 contact">
 				<!-- Logo -->
-				<?php echo CHtml::link('<img src="'. Yii::app() -> request -> baseUrl .'/images/logo.png" alt="Logo" />', array('/'), array('class'=>'navbar-brand')); ?>
+				<?php echo CHtml::link('<img src="' . Yii::app() -> request -> baseUrl . '/images/logo.png" alt="Logo" />', array('/'), array('class' => 'navbar-brand')); ?>
 				<!-- /logo -->
             </div>
             <div class="col-md-7 col-sm-6 col-xs-12 submenu">
                 <ul class="loginbar">
-                    <li><?php echo CHtml::link('Help', array('site/page','view'=>'faq'), array('class'=>'login-btn')); ?></li>
-                    <li><?php echo CHtml::link('Login', array('/usr/default/Login'), array('class'=>'login-btn')); ?></li>
+                    <li><?php echo CHtml::link('Help', array('site/page', 'view' => 'faq'), array('class' => 'login-btn')); ?></li>
+                    <li><?php echo CHtml::link('Login', array('/usr/default/Login'), array('class' => 'login-btn')); ?></li>
                 </ul>
                 <ul class="list-inline socials-content socials-light">
                     <li>
@@ -92,154 +92,155 @@
     <div class="container">
 
     <!-- Menu -->
-	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-    'brandLabel' => 'Demo',
-    'color' => TbHtml::NAVBAR_COLOR_INVERSE,
-    'display' => null, // default is static to top
-    'items' => array(
-        array(
-            'class' => 'bootstrap.widgets.TbNav',
-            'items' => array(
-                array('label' => 'Home', 'url' => '/demo', 'active' => true),
-               // array('label' => 'Shop', 'url' => array('/demo/store', 'view' => 'products')),
-                array('label' => 'Info','items' => array(
-                	array('label' => 'About Us','url' => array('/site/page', 'view'=>'about')),
-                	array('label' => 'Our Services', 'url' => array('/site/page', 'view'=>'services')),
-                	array('label' => 'Our Clients', 'url' =>array('/site/page', 'view'=>'clients')),
-                	array('label' => 'Contact', 'url' => '/demo/site/Contact'),
-                	array('label' => 'Terms of Service', 'url' =>array('/site/page', 'view'=>'terms')),
-                	array('label' => 'Privacy Policy', 'url' =>array('/site/page', 'view'=>'privacy')),
-                	)),
-                array('label' => 'Portfolio', 'url' =>array('/site/page', 'view'=>'portfolio')),
-                array('label' => 'Login', 'url' => '/demo/usr/default/Login', 'visible'=>Yii::app()->user->isGuest),
-                array('label' => 'Register', 'url' => '/demo/usr/default/register', 'visible'=>Yii::app()->user->isGuest),
-                array('label' => 'Logout ('. Yii::app()->user->name . ')' , 'url' => '/demo/site/Logout', 'visible'=>!Yii::app()->user->isGuest),
-                TbHtml::navbarSearchForm('#'),
-            ),
-        ),
-    ),
-)); ?>
+	<?php $this -> widget('bootstrap.widgets.TbNavbar', array(
+	'brandLabel' => 'Demo',
+	'color' => TbHtml::NAVBAR_COLOR_INVERSE,
+	'display' => null, // default is static to top
+	'items' => array(
+		array(
+		'class' => 'bootstrap.widgets.TbNav',
+		'items' => array(
+			array('label' => 'Home', 'url' => '/demo', 'active' => true),
+		// array('label' => 'Shop', 'url' => array('/demo/store', 'view' => 'products')),
+			array('label' => 'Info', 'items' => array(
+				array('label' => 'About Us', 'url' => array('/site/page', 'view' => 'about')),
+				array('label' => 'Our Services', 'url' => array('/site/page', 'view' => 'services')),
+				array('label' => 'Our Clients', 'url' => array('/site/page', 'view' => 'clients')),
+				array('label' => 'Contact', 'url' => '/demo/site/Contact'),
+				array('label' => 'Terms of Service', 'url' => array('/site/page', 'view' => 'terms')),
+				array('label' => 'Privacy Policy', 'url' => array('/site/page', 'view' => 'privacy')),
+				)),
+			array('label' => 'Portfolio', 'url' => array('/site/page', 'view' => 'portfolio')),
+			array('label' => 'Blog', 'url' => array('/post/index')),
+			array('label' => 'Login', 'url' => '/demo/usr/default/Login', 'visible' => Yii::app() -> user -> isGuest),
+			array('label' => 'Register', 'url' => '/demo/usr/default/register', 'visible' => Yii::app() -> user -> isGuest),
+			array('label' => 'Logout (' . Yii::app() -> user -> name . ')', 'url' => '/demo/site/Logout', 'visible' => !Yii::app() -> user -> isGuest), TbHtml::navbarSearchForm('#'),
+			),
+		),
+	),
+));
+ ?>
  </div> <!-- /container -->
  </div> <!--/header -->
 <!-- === End Header === -->
 
 <div class="container">
 	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+		<?php $this -> widget('zii.widgets.CBreadcrumbs', array('links' => $this -> breadcrumbs, )); ?><!-- breadcrumbs -->
+	<?php endif ?>
+</div>
 
     <!-- Start Yii page content -->
 	<?php echo $content; ?>
 	<!-- End Yii Page Content -->
 
-	<hr class="lined-bottom"/>
-
+	
+<div class="container"
+	<div class="col-lg-12">
     <!-- Our Clients -->
     <div id="clients-flexslider" class="flexslider home clients">
         <h3 class="content-title">Our Clients</h3>
         <ul class="slides">
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/hp_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/hp.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/hp_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/hp.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/igneus_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/igneus.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/igneus_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/igneus.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/vadafone_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/vadafone.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/vadafone_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/vadafone.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/walmart_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/walmart.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/walmart_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/walmart.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/shell_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/shell.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/shell_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/shell.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/natural_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/natural.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/natural_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/natural.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/aztec_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/aztec.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/aztec_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/aztec.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/gamescast_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/gamescast.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/gamescast_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/gamescast.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/cisco_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/cisco.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/cisco_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/cisco.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/everyday_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/everyday.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/everyday_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/everyday.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/cocacola_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/cocacola.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/cocacola_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/cocacola.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/spinworkx_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/spinworkx.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/spinworkx_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/spinworkx.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/shell_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/shell.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/shell_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/shell.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/natural_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/natural.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/natural_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/natural.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/gamescast_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/gamescast.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/gamescast_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/gamescast.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/everyday_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/everyday.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/everyday_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/everyday.png" class="color-img" alt="" />
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/spinworkx_grey.png" alt="" />
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/spinworkx.png" class="color-img" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/spinworkx_grey.png" alt="" />
+                    <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/clients/spinworkx.png" class="color-img" alt="" />
                 </a>
             </li>
         </ul>
@@ -329,14 +330,14 @@
                 <!-- Photo stream -->
                 <h3>Photo Stream</h3>
                 <ul class="list-unstyled blog-ads row">
-                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/elastislide/5.jpg" alt="" /></a></li>
-                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/elastislide/6.jpg" alt="" /></a></li>
-                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/elastislide/8.jpg" alt="" /></a></li>
-                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/elastislide/10.jpg" alt="" /></a></li>
-                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/elastislide/11.jpg" alt="" /></a></li>
-                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/elastislide/1.jpg" alt="" /></a></li>
-                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/elastislide/2.jpg" alt="" /></a></li>
-                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/elastislide/7.jpg" alt="" /></a></li>
+                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/sliders/elastislide/5.jpg" alt="" /></a></li>
+                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/sliders/elastislide/6.jpg" alt="" /></a></li>
+                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/sliders/elastislide/8.jpg" alt="" /></a></li>
+                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/sliders/elastislide/10.jpg" alt="" /></a></li>
+                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/sliders/elastislide/11.jpg" alt="" /></a></li>
+                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/sliders/elastislide/1.jpg" alt="" /></a></li>
+                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/sliders/elastislide/2.jpg" alt="" /></a></li>
+                    <li class="col-md-3 col-sm-4 col-xs-2"><a href="#" class="bwWrapper"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/sliders/elastislide/7.jpg" alt="" /></a></li>
                 </ul>
                 <!-- end Photo stream -->
             </div>
@@ -359,63 +360,70 @@
     </div><!--/container-->
 </div><!--/copyright-->
 <!--=== End Copyright ===-->
-
+</div>
+</div>
 <!-- JS Global Compulsory -->
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/js/modernizr.custom.js"></script>
 <script type="text/javascript" src="/extensions/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/portfolioSorting/js/jquery.quicksand.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/portfolioSorting/js/sorting.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/parallax-slider/js/modernizr.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/parallax-slider/js/jquery.cslider.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/bxslider/jquery.bxslider.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/b_and_w/jquery.BlackAndWhite.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/plugins/jquery.sticky.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/portfolioSorting/js/jquery.quicksand.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/portfolioSorting/js/sorting.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/b_and_w/jquery.BlackAndWhite.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/plugins/jquery.sticky.js"></script>
 
 <!-- JS Page Level -->
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/app.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/pages/index.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/js/app.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app() -> request -> baseUrl; ?>/js/pages/index.js"></script>
 <script type="text/javascript">
-    var ieversion = 0;
-    if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ //test for MSIE x.x;
-        ieversion=new Number(RegExp.$1); // capture x.x portion and store as a number
-    }
-    jQuery(document).ready(function() {
-      	App.init();
-        App.initSliders();
-        Index.initParallaxSlider();
-        App.initBxSlider1();
+	var ieversion = 0;
+	if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {//test for MSIE x.x;
+		ieversion = new Number(RegExp.$1);
+		// capture x.x portion and store as a number
+	}
+	jQuery(document).ready(function() {
+		App.init();
+		App.initSliders();
+		Index.initParallaxSlider();
+		App.initBxSlider1();
 		// make main menu sticky
-		if (( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) && ((ieversion >= 10) || (ieversion == 0))) {
-			$(".header").sticky({topSpacing: 0, stickyHeight: 70});
-		} else {}
-    });
-    if (( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) && ((ieversion >= 10) || (ieversion == 0))) {
-        $(window).load(function(){
-            $('.bwWrapper').BlackAndWhite({
-                hoverEffect : true, // default true
-                // set the path to BnWWorker.js for a superfast implementation
-                webworkerPath : false,
-                // for the images with a fluid width and height
-                responsive:true,
-                // to invert the hover effect
-                invertHoverEffect: false,
-                // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
-                intensity:1,
-                speed: { //this property could also be just speed: value for both fadeIn and fadeOut
-                    fadeIn: 200, // 200ms for fadeIn animations
-                    fadeOut: 800 // 800ms for fadeOut animations
-                },
-                onImageReady:function(img) {
-                    // this callback gets executed anytime an image is converted
-                }
-            });
-        });
-    } else {}
+		if ((! /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) && ((ieversion >= 10) || (ieversion == 0))) {
+			$(".header").sticky({
+				topSpacing : 0,
+				stickyHeight : 70
+			});
+		} else {
+		}
+	});
+	if ((! /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) && ((ieversion >= 10) || (ieversion == 0))) {
+		$(window).load(function() {
+			$('.bwWrapper').BlackAndWhite({
+				hoverEffect : true, // default true
+				// set the path to BnWWorker.js for a superfast implementation
+				webworkerPath : false,
+				// for the images with a fluid width and height
+				responsive : true,
+				// to invert the hover effect
+				invertHoverEffect : false,
+				// this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+				intensity : 1,
+				speed : {//this property could also be just speed: value for both fadeIn and fadeOut
+					fadeIn : 200, // 200ms for fadeIn animations
+					fadeOut : 800 // 800ms for fadeOut animations
+				},
+				onImageReady : function(img) {
+					// this callback gets executed anytime an image is converted
+				}
+			});
+		});
+	} else {
+	}
 </script>
 <!--[if lt IE 9]>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/respond.js"></script>

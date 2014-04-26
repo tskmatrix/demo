@@ -11,7 +11,7 @@ $this->pageTitle = Yii::app()->name.' - '.$title;
 
 <?php $this->widget('usr.components.UsrAlerts', array('cssClassPrefix'=>$this->module->alertCssClassPrefix)); ?>
 
-<div class="<?php echo $this->module->formCssClass; ?>">
+<div class="<?php echo $this->module->formCssClass; ?> login-page">
 <?php $form=$this->beginWidget($this->module->formClass, array(
 	'id'=>'login-form',
 	'enableClientValidation'=>true,

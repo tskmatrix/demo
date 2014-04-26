@@ -13,7 +13,7 @@ $this->breadcrumbs=array(
 
 <p>Please fill out the following form with your login credentials:</p>
 
-<div class="form">
+<div class="form login-page">
 <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,
     'id'=>'login-form',

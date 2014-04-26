@@ -9,6 +9,11 @@ if (isset($this->breadcrumbs))
 	$this->breadcrumbs=array($this->module->id, $title);
 $this->pageTitle = Yii::app()->name.' - '.$title;
 ?>
+
+<div class="container">
+	<div class="col-md-12">
+
+
 <h1><?php echo $title; ?></h1>
 
 <?php $this->widget('usr.components.UsrAlerts', array('cssClassPrefix'=>$this->module->alertCssClassPrefix)); ?>
@@ -41,3 +46,5 @@ $this->pageTitle = Yii::app()->name.' - '.$title;
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+</div>
+</div>
