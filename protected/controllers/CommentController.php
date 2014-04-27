@@ -2,7 +2,7 @@
 
 class CommentController extends Controller
 {
-	public $layout='column2';
+	public $layout='blog';
 
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.
@@ -128,3 +128,4 @@ class CommentController extends Controller
 		return $this->_model;
 	}
 }
+?>

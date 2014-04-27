@@ -44,18 +44,16 @@
 				<?php echo CHtml::link('<img src="' . Yii::app() -> request -> baseUrl . '/images/logo.png" alt="Logo" />', array('/'), array('class' => 'navbar-brand')); ?>
 				<!-- /logo -->
             </div>
-            <div class="col-md-7 col-sm-6 col-xs-12 submenu">
+            <div class="col-md-7 col-sm-6 col-xs-12 submenu pull-right">
                 <ul class="loginbar">
                     <li><?php echo CHtml::link('Help', array('site/page', 'view' => 'faq'), array('class' => 'login-btn')); ?></li>
                     <li><?php echo CHtml::link('Login', array('/usr/default/Login'), array('class' => 'login-btn')); ?></li>
                 </ul>
                 <ul class="list-inline socials-content socials-light">
                     <li>
-                        <a class="rss" href="#">
-                            <i class="icon-rss"></i>
-                        </a>
+                    	<?php echo CHtml::link('<i class="icon-rss"></i>','#', array('target'=>'_blank', 'class'=>'rss')); ?>
                     </li>
-                    <li>
+                 <!--   <li>
                         <a class="fb" href="#">
                             <i class="icon-facebook"></i>
                         </a>
@@ -64,21 +62,17 @@
                         <a class="tw" href="#">
                             <i class="icon-twitter"></i>
                         </a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a class="gl" href="#">
-                            <i class="icon-google-plus"></i>
-                        </a>
+                    	<?php echo CHtml::link('<i class="icon-google-plus"></i>','#', array('target'=>'_blank', 'class'=>'gl')); ?>
                     </li>
-                    <li>
+                 <!--   <li>
                         <a class="pt" href="#">
                             <i class="icon-pinterest"></i>
                         </a>
-                    </li>
+                 </li> -->
                     <li>
-                        <a class="lin" href="#">
-                            <i class="icon-linkedin"></i>
-                        </a>
+                    	<?php echo CHtml::link('<i class="icon-linkedin"></i>','#', array('target'=>'_blank', 'class'=>'lin')); ?>
                     </li>
                 </ul>
             </div>
@@ -134,7 +128,7 @@
 	<?php echo $content; ?>
 	<!-- End Yii Page Content -->
 
-	
+
 <div class="container"
 	<div class="col-lg-12">
     <!-- Our Clients -->
@@ -294,11 +288,9 @@
                 <h3>Social links</h3>
                 <ul class="list-inline socials-content">
                     <li>
-                        <a class="rss" href="#">
-                            <i class="icon-rss"></i>
-                        </a>
+                        <?php echo CHtml::link('<i class="icon-rss"></i>','#', array('target'=>'_blank', 'class'=>'rss')); ?>
                     </li>
-                    <li>
+                <!--    <li>
                         <a class="fb" href="#">
                             <i class="icon-facebook"></i>
                         </a>
@@ -307,21 +299,17 @@
                         <a class="tw" href="#">
                             <i class="icon-twitter"></i>
                         </a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a class="gl" href="#">
-                            <i class="icon-google-plus"></i>
-                        </a>
+                        <?php echo CHtml::link('<i class="icon-google-plus"></i>','#', array('target'=>'_blank', 'class'=>'gl')); ?>
                     </li>
-                    <li>
+                <!--    <li>
                         <a class="pt" href="#">
                             <i class="icon-pinterest"></i>
                         </a>
-                    </li>
+                </li> -->
                     <li>
-                        <a class="lin" href="#">
-                            <i class="icon-linkedin"></i>
-                        </a>
+                        <?php echo CHtml::link('<i class="icon-linkedin"></i>','#', array('target'=>'_blank', 'class'=>'lin')); ?>
                     </li>
                 </ul>
             <!-- end Socials -->

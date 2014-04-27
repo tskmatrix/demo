@@ -8,6 +8,9 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
+	//'defaultController'=>'site',
+
+
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -22,6 +25,8 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'ext.usercounter.*',
+		'ext.esearch.*',
 		'bootstrap.helpers.TbHtml',
 		'bootstrap.helpers.TbArray',
 		'bootstrap.behaviors.TbWidget',
@@ -61,6 +66,10 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+            // UserCounter
+            'counter' => array(
+                'class' => 'UserCounter',
+            ),
 
 		// uncomment the following to enable URLs in path-format
 
@@ -69,8 +78,8 @@ return array(
 		     'showScriptName'=>false,
 		     'caseSensitive'=>false,
 			'rules'=>array(
-                'post/<id:\d+>/<title:.*?>'=>'/post/view',
-                'posts/<tag:.*?>'=>'/post/index',
+                'post/<id:\d+>/<title:.*?>'=>'post/view',
+        		'posts/<tag:.*?>'=>'post/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
@@ -98,19 +107,16 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-
+				/*
 				array(
 					'class'=>'CWebLogRoute',
 				),
-
+				*/
 			),
 		),
 	),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-	'params'=>array(
-		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
-	),
+	'params'=>require(dirname(__FILE__).'/params.php'),
 );

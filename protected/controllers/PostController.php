@@ -2,7 +2,7 @@
 
 class PostController extends Controller
 {
-	public $layout='column2';
+	public $layout='blog';
 
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.
@@ -214,3 +214,4 @@ class PostController extends Controller
 		return $comment;
 	}
 }
+?>

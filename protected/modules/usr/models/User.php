@@ -21,6 +21,7 @@
  * @property string $one_time_password_secret
  * @property string $one_time_password_code
  * @property integer $one_time_password_counter
+ * @property string $website
  *
  * The followings are the available model relations:
  * @property UserRemoteIdentity[] $userRemoteIdentities
@@ -65,6 +66,7 @@ class User extends CActiveRecord
 			'userRemoteIdentities' => array(self::HAS_MANY, 'UserRemoteIdentity', 'user_id'),
 			'userUsedPasswords' => array(self::HAS_MANY, 'UserUsedPassword', 'user_id', 'order'=>'set_on DESC'),
 			'userProfilePictures' => array(self::HAS_MANY, 'UserProfilePicture', 'user_id'),
+			'posts' => array(self::HAS_MANY, 'Post', 'author_id'),
 		);
 	}
 
@@ -74,23 +76,24 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => Yii::t('models', 'ID'),
-			'username' => Yii::t('models', 'Username'),
-			'password' => Yii::t('models', 'Password'),
-			'email' => Yii::t('models', 'Email'),
-			'firstname' => Yii::t('models', 'Firstname'),
-			'lastname' => Yii::t('models', 'Lastname'),
-			'activation_key' => Yii::t('models', 'Activation Key'),
-			'created_on' => Yii::t('models', 'Created On'),
-			'updated_on' => Yii::t('models', 'Updated On'),
-			'last_visit_on' => Yii::t('models', 'Last Visit On'),
-			'password_set_on' => Yii::t('models', 'Password Set On'),
-			'email_verified' => Yii::t('models', 'Email Verified'),
-			'is_active' => Yii::t('models', 'Is Active'),
-			'is_disabled' => Yii::t('models', 'Is Disabled'),
-			'one_time_password_secret' => Yii::t('models', 'One Time Password Secret'),
-			'one_time_password_code' => Yii::t('models', 'One Time Password Code'),
-			'one_time_password_counter' => Yii::t('models', 'One Time Password Counter'),
+			'id' => 'ID',
+			'username' => 'Username',
+			'password' => 'Password',
+			'email' => 'Email',
+			'firstname' => 'Firstname',
+			'lastname' => 'Lastname',
+			'activation_key' => 'Activation Key',
+			'created_on' => 'Created On',
+			'updated_on' => 'Updated On',
+			'last_visit_on' => 'Last Visit On',
+			'password_set_on' => 'Password Set On',
+			'email_verified' => 'Email Verified',
+			'is_active' => 'Is Active',
+			'is_disabled' => 'Is Disabled',
+			'one_time_password_secret' => 'One Time Password Secret',
+			'one_time_password_code' => 'One Time Password Code',
+			'one_time_password_counter' => 'One Time Password Counter',
+			'website' => 'Your Website',
 		);
 	}
 
@@ -116,6 +119,7 @@ class User extends CActiveRecord
 		$criteria->compare('email_verified',$this->email_verified);
 		$criteria->compare('is_active',$this->is_active);
 		$criteria->compare('is_disabled',$this->is_disabled);
+		$criteria->compare('website',$this->website,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

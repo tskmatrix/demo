@@ -1,45 +1,59 @@
-<?php
-/* @var $this PostController */
-/* @var $model Post */
-/* @var $form TbActiveForm */
-?>
-
 <div class="form">
 
-    <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-	'id'=>'post-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
+<?php $form=$this->beginWidget('CActiveForm'); ?>
 
-    <p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-    <?php echo $form->errorSummary($model); ?>
+	<?php echo CHtml::errorSummary($model); ?>
 
-            <?php echo $form->textFieldControlGroup($model,'title',array('span'=>5,'maxlength'=>128)); ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>80,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'title'); ?>
+	</div>
 
-            <?php echo $form->textAreaControlGroup($model,'content',array('rows'=>6,'span'=>8)); ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'content'); ?>
 
-            <?php echo $form->textAreaControlGroup($model,'tags',array('rows'=>6,'span'=>8)); ?>
+                <?php
 
-            <?php echo $form->dropDownListControlGroup($model,'status', Lookup::items('PostStatus'), array('span'=>5)); ?>
+                $this->widget('ext.xheditor.XHeditor',array(
+                    'model'=>$model,
+                    'modelAttribute'=>'content',
+                    'showModelAttributeValue'=>true, //defaults to true, displays the value of $modelInstance->attribute in the textarea
+                    'config'=>array(
+                        'tools'=>'mfull', // mini, simple, mfull, full or from XHeditor::$_tools
+                        'width'=>'100%',
+                    ),
+                ));
 
-            <?php echo $form->textFieldControlGroup($model,'create_time',array('span'=>5)); ?>
+                ?>
+		<?php echo $form->error($model,'content'); ?>
+	</div>
 
-            <?php echo $form->textFieldControlGroup($model,'update_time',array('span'=>5)); ?>
-
-            <?php echo $form->textFieldControlGroup($model,'author_id',array('span'=>5)); ?>
-
-        <div class="form-actions">
-        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(
-		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,
-		    'size'=>TbHtml::BUTTON_SIZE_LARGE,
+	<div class="row">
+		<?php echo $form->labelEx($model,'tags'); ?>
+		<?php $this->widget('CAutoComplete', array(
+			'model'=>$model,
+			'attribute'=>'tags',
+			'url'=>array('suggestTags'),
+			'multiple'=>true,
+			'htmlOptions'=>array('size'=>50),
 		)); ?>
-    </div>
+		<p class="hint">Please separate different tags with commas.</p>
+		<?php echo $form->error($model,'tags'); ?>
+	</div>
 
-    <?php $this->endWidget(); ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'status'); ?>
+		<?php echo $form->dropDownList($model,'status',Lookup::items('PostStatus')); ?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
 
 </div><!-- form -->
