@@ -1,0 +1,1 @@
+var CKEDITOR_BASEPATH="/demo/assets/f98e1c82/";

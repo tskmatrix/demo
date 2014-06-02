@@ -10,8 +10,6 @@ return array(
 	'name'=>'My Web Application',
 	//'defaultController'=>'site',
 
-
-
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -51,6 +49,37 @@ return array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
 			//'administration',
+
+		    'forum'=>array(
+		        'class'=>'application.modules.bbii.BbiiModule',
+		        'adminId'=>3,
+		        'userClass'=>'User',
+		        'userIdColumn'=>'id',
+		        'userNameColumn'=>'username',
+		        'userMailColumn' => 'email',
+		        //'topicsPerpage' => 20,
+		        'postsPerPage' => 25,
+		        'purifierOptions' => array(
+					'HTML.SafeIframe' => true,
+					'URI.SafeIframeRegexp' => '%^http://(www.youtube.com/embed/|player.vimeo.com/video/)%',
+					),
+				'avatarStorage'=>'/avatar',
+				'forumTitle'=>'Demo Forum',
+				'editorToolbar'=>array(
+						array('Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo'),
+						array('Find','Replace','-','SelectAll'),
+						array('Bold', 'Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat'),
+						'-',
+						array('NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv',
+						'-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'),
+						array('Link', 'Unlink','Image','Iframe','Preview'),
+						array('/'),
+						array('Styles','Format','Font','FontSize'),
+						array('TextColor','BGColor'),
+						array('HorizontalRule','Smiley','SpecialChar','-','ShowBlocks')
+						),
+				//'cssFile'=>'',
+		    ),
 	),
 
 	// application components

@@ -84,19 +84,24 @@ Remember to invalidate the email if it changes in the save() method from the Edi
 
 ## Password history
 
-This interface allows password reset with optional tracking of used passwords. This allows to detect expired passwords and avoid reusing old passwords by users.
+This interface allows password reset with optional tracking of used passwords.
+This allows to detect expired passwords and avoid reusing old passwords by users.
 
 ## Hybridauth
 
-This interface allows finding local identity associated with a remote one (from an external social site) and creating such associations.
+This interface allows finding local identity associated with a remote one (from an external
+social site) and creating such associations.
 
 ## One Time Password
 
-This interface allow saving and retrieving a secret used to generate one time passwords. Also, last used password and counter used to generate last password are saved and retrieve to protect against reply attacks.
+This interface allow saving and retrieving a secret used to generate one time passwords.
+Also, last used password and counter used to generate last password are saved and retrieve
+to protect against reply attacks.
 
 ## Profile Pictures
 
-Allows users to upload a profile picture. The example identity uses [Gravatar](http://gravatar.com/) to provide a default picture.
+Allows users to upload a profile picture.
+The example identity uses [Gravatar](http://gravatar.com/) to provide a default picture.
 
 ## Managable
 
@@ -110,15 +115,20 @@ Allows to manage users:
 
 # User model example
 
-A sample ExampleUserIdentity and corresponding ExampleUser and ExampleUserUsedPassword models along with database migrations are provided respectively in the 'components', 'models' and 'migrations' folders.
+A sample ExampleUserIdentity and corresponding ExampleUser and ExampleUserUsedPassword models
+along with database migrations are provided respectively in the 'components', 'models'
+and 'migrations' folders.
 
 They could be used as-is by extending from or copying to be modified to better suit a project.
 
-To use the provided migrations it's best to copy them to your migrations directory and adjust the filenames and classnames to current date and time. Also, they could be modified to remove not needed features.
+To use the provided migrations it's best to copy them to your migrations directory and adjust
+the filenames and classnames to current date and time. Also, they could be modified to remove
+not needed features.
 
 # Diceware aka password generator
 
-A simple implementation of a Diceware Passphrase generator is provided to aid users when they need to create a good, long but also easy to remember passphrase.
+A simple implementation of a Diceware Passphrase generator is provided to aid users when they
+need to create a good, long but also easy to remember passphrase.
 
 Read more at [the Diceware Passphrase homepage](http://world.std.com/~reinhold/diceware.html).
 
@@ -131,13 +141,15 @@ It is possible to add more profile fields:
 * Override view files in a theme.
 * Create a behavior class extending _FormModelBehavior_.
 * Add that behvaior in the _UsrModule::profileFormBehaviors_ property.
-* Remember to update _setAttributes_ and _getAttributes_ methods of your UserIdentity class to include new profile fields.
+* Remember to update _setAttributes_ and _getAttributes_ methods of your UserIdentity class to
+  include new profile fields.
 
 The behavior will include properties, rules and labels. Rules can contain inline validators defined in that behavior, just call them using the _behaviorValidator_ helper method:
 ~~~php
    // BEHAVIOR_NAME is the key used in UsrModule::profileFormBehaviors
    // INLINE_VALIDATOR is the name of the inline validator method defined in the behavior
-   array('attribute', 'behaviorValidator', 'behavior'=>'BEHAVIOR_NAME', 'validator'=>'INLINE_VALIDATOR', /* other params */),
+   array('attribute', 'behaviorValidator', 'behavior'=>'BEHAVIOR_NAME',
+         'validator'=>'INLINE_VALIDATOR', /* other params */),
 ~~~
 
 ## Email templates
@@ -164,12 +176,14 @@ Users can register by themselves. Their accounts are activated instantly or afte
 
 ## Moderated site
 
-Users can register, but to allow them to log in an administrator must activate their accounts manually, optionally assigning an authorization profile.
+Users can register, but to allow them to log in an administrator must activate their accounts
+manually, optionally assigning an authorization profile.
 Email verification is optional and activation could trigger an email notification.
 
 # Configuration for Twitter Bootstrap
 
-If using the [bootstrap extension](http://www.yiiframework.com/extension/bootstrap), the following configuration may be used:
+If using the [bootstrap extension](http://www.yiiframework.com/extension/bootstrap), the following
+configuration may be used:
 
 ~~~
 'usr' => array(
@@ -188,7 +202,8 @@ If using the [bootstrap extension](http://www.yiiframework.com/extension/bootstr
 	),
 ~~~
 
-Besides that, all views could be overriden in a theme. A following skin can be used for user managment grid:
+Besides that, all views could be overriden in a theme. A following skin can be used for user
+managment grid:
 
 ~~~
 <?php

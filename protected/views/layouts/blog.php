@@ -117,8 +117,9 @@ $model = new Post;
                         <div id="collapseTwo" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <?php $this->widget('RecentComments', array(
-									'maxComments'=>Yii::app()->params['recentCommentCount'],
-								)); ?>
+							        'maxComments'=>Yii::app()->params['recentCommentCount'],
+							    )); ?>
+
                             </div>
                         </div>
                     </div> <!--

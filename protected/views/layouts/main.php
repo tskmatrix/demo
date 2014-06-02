@@ -105,6 +105,7 @@
 				array('label' => 'Privacy Policy', 'url' => array('/site/page', 'view' => 'privacy')),
 				)),
 			array('label' => 'Portfolio', 'url' => array('/site/page', 'view' => 'portfolio')),
+			array('label' => 'Forum', 'url' => 'Forum'),
 			array('label' => 'Blog', 'url' => array('/post/index')),
 			array('label' => 'Login', 'url' => '/demo/usr/default/Login', 'visible' => Yii::app() -> user -> isGuest),
 			array('label' => 'Register', 'url' => '/demo/usr/default/register', 'visible' => Yii::app() -> user -> isGuest),
